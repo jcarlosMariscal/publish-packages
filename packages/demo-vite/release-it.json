@@ -1,7 +1,8 @@
 {
   "git": {
     "commitMessage": "chore(release): ${version}",
-    "tagName": "${name}-v${version}"
+    "tagName": "${name}-v${version}",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
   },
   "github": {
     "release": true,
@@ -13,7 +14,7 @@
     "versionArgs": ["--workspaces false"]
   },
   "hooks": {
-    "after:bump": "npm run build"
+    "after:bump": "npm run build && npx auto-changelog -p"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
