@@ -16,6 +16,16 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "release": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "cache": false
+    },
+    "publish:package": {
+      "dependsOn": ["release"],
+      "outputs": [],
+      "cache": false
     }
   }
 }

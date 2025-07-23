@@ -1,0 +1,18 @@
+{
+  "git": {
+    "commitMessage": "chore(release): ${version}",
+    "tagName": "${name}-v${version}"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "${name} v${version}",
+    "assets": ["CHANGELOG.md"]
+  },
+  "npm": {
+    "publish": false,
+    "versionArgs": ["--workspaces false"]
+  },
+  "hooks": {
+    "after:bump": "npm run build"
+  }
+}
