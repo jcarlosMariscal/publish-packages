@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "release": "release-it",
+    "release": "release-it --ci",
     "copy-meta": "cp package.json dist/ && cp CHANGELOG.md dist/ && cp README.md dist/",
     "prepare-publish": "npm run build && npm run release && npm run copy-meta",
     "publish:dist": "cd dist && npm publish"
