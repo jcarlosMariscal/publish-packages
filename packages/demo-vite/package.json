@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "release": "release-it",
     "copy-meta": "cp package.json dist/ && cp CHANGELOG.md dist/ && cp README.md dist/",
-    "prepublish:dist": "npm run release && npm run copy-meta",
+    "prepare-publish": "npm run release && npm run copy-meta",
     "publish:dist": "cd dist && npm publish"
   },
   "devDependencies": {
