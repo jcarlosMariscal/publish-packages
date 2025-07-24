@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.9](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.8...v0.2.9) (2025-07-24)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: ajustes a script ([25e6998](https://github.com/jcarlosMariscal/publish-packages/commit/25e6998d6829807101a069a7d0ef9e0f9aa18640))
+
 ## [0.2.8](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.7...v0.2.8) (2025-07-24)
 
 ### Bug Fixes
