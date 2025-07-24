@@ -21,8 +21,8 @@
       "outputs": [],
       "cache": false
     },
-    "publish:package": {
-      "dependsOn": ["release"],
+    "publish-package": {
+      "dependsOn": ["build"],
       "outputs": [],
       "cache": false
     }
