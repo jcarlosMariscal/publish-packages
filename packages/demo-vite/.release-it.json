@@ -4,14 +4,16 @@
     "tagName": "v${version}",
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
-    "requireBranch": "main"
+    "requireBranch": "main",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
   },
   "npm": {
     "publish": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "conventionalcommits"
+      "preset": "conventionalcommits",
+      "infile": "CHANGELOG.md"
     }
   },
   "changelog": {
