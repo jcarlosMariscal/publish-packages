@@ -17,7 +17,6 @@
     }
   },
   "changelog": {
-    "enabled": true,
     "file": "CHANGELOG.md"
   }
 }
