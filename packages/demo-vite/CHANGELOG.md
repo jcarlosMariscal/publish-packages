@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.3](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.2...v0.2.3) (2025-07-24)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: creación readme ([cd40a74](https://github.com/jcarlosMariscal/publish-packages/commit/cd40a74f3715ba77de5f41d3c5f2bae3a75c99a5))
+
 ## [0.2.2](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.1...v0.2.2) (2025-07-24)
 
 ### Bug Fixes
