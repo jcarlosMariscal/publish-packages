@@ -4,10 +4,13 @@
     "tagName": "v${version}",
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
-    "requireBranch": "main"
+    "requireBranch": "main",
+    "tag": true,
+    "commit": true,
+    "push": true
   },
   "npm": {
-    "publish": true
+    "publish": false
   },
   "plugins": {
     "@release-it/conventional-changelog": {
