@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.8](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.7...v0.2.8) (2025-07-24)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: mejoras ([6a82f19](https://github.com/jcarlosMariscal/publish-packages/commit/6a82f196f541c714d71de9579e9a228047f902cb))
+
 ## [0.2.7](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.6...v0.2.7) (2025-07-24)
 
 ### Bug Fixes
