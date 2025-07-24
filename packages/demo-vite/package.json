@@ -10,7 +10,7 @@
     "release": "release-it",
     "clean-package": "node ../../scripts/generate-package.mjs",
     "copy-assets": "npm run clean-package && cp CHANGELOG.md dist/ && cp README.md dist/",
-    "prepare-publish": "npm run release && npm run copy-assets",
+    "prepare-publish": "npm run build && npm run release && npm run copy-assets",
     "publish:dist": "cd dist && npm publish",
     "publish-package": "npm run prepare-publish && npm run publish:dist"
   },
