@@ -11,6 +11,7 @@
     "publish:package": "turbo run publish:package"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.1",
     "prettier": "^3.6.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "release-it": "^19.0.4",
@@ -19,8 +20,5 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    "@release-it/conventional-changelog": "^10.0.1"
   }
 }

@@ -2,7 +2,8 @@
   "release-it": {
     "plugins": {
       "@release-it/conventional-changelog": {
-        "preset": "conventionalcommits"
+        "preset": "conventionalcommits",
+        "infile": "CHANGELOG.md"
       }
     },
     "git": {
@@ -11,9 +12,6 @@
     },
     "npm": {
       "publish": true
-    },
-    "changelog": {
-      "file": "CHANGELOG.md"
     }
   }
 }

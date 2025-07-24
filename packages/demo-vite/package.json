@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "release": "release-it --no-npm.publish",
+    "release": "release-it",
     "postrelease": "node ../../scripts/copy-to-dist.js",
     "publish:package": "cd dist && npm publish --access public"
   },
