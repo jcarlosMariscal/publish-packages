@@ -1,17 +1,21 @@
 {
-  "release-it": {
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "conventionalcommits",
-        "infile": "CHANGELOG.md"
-      }
-    },
-    "git": {
-      "commitMessage": "chore(release): v${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
+  "git": {
+    "commitMessage": "chore(release): v${version}",
+    "tagName": "v${version}",
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true,
+    "requireBranch": "main"
+  },
+  "npm": {
+    "publish": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "conventionalcommits"
     }
+  },
+  "changelog": {
+    "enabled": true,
+    "file": "CHANGELOG.md"
   }
 }
