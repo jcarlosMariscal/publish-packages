@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.2](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.1...v0.2.2) (2025-07-24)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: cambios en config ([87886ba](https://github.com/jcarlosMariscal/publish-packages/commit/87886ba8ad4d0e09178ce1798154bfbe73df1516))
+
 ## [0.2.1](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.0...v0.2.1) (2025-07-24)
 
 ### Bug Fixes
