@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.7](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.6...v0.2.7) (2025-07-24)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: agregación de --ci ([8a16ca1](https://github.com/jcarlosMariscal/publish-packages/commit/8a16ca13f8a4628ff81c34ca2feb1f4404d901d9))
+
 ## [0.2.6](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.5...v0.2.6) (2025-07-24)
 
 ### Bug Fixes
