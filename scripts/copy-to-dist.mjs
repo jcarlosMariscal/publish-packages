@@ -1,24 +1,38 @@
-const fs = require("fs");
-const path = require("path");
+// scripts/generate-package-json.js
+import fs from "fs";
+import path from "path";
 
-const packageDir = path.join(__dirname, "../packages/demo-vite");
-const distDir = path.join(packageDir, "dist");
+const pkgPath = path.join(process.cwd(), "package.json");
+const distPath = path.join(process.cwd(), "dist", "package.json");
 
-// Archivos que deben copiarse a dist/
-const filesToCopy = ["package.json", "README.md", "LICENSE"];
+const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf-8"));
 
-// Asegurarse que el directorio dist existe
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
-}
+// Mapa para reemplazar workspace:* por la versión deseada
+const deps = { ...pkg.dependencies };
+// const replacements = {
+//   "@didacteca/icons": "0.13.0",
+// };
 
-// Copiar cada archivo
-filesToCopy.forEach((file) => {
-  const source = path.join(packageDir, file);
-  const destination = path.join(distDir, file);
+// for (const dep in replacements) {
+//   if (deps[dep] && deps[dep].startsWith("workspace:")) {
+//     deps[dep] = replacements[dep];
+//   }
+// }
 
-  if (fs.existsSync(source)) {
-    fs.copyFileSync(source, destination);
-    console.log(`Copied ${file} to dist/`);
-  }
-});
+const cleanPkg = {
+  name: pkg.name,
+  version: pkg.version,
+  types: pkg.types,
+  description: pkg.description,
+  dependencies: deps,
+  author: pkg.author,
+  contributors: pkg.contributors,
+  keywords: pkg.keywords,
+  repository: pkg.repository,
+  publishConfig: pkg.publishConfig,
+  bugs: pkg.bugs,
+  license: pkg.license,
+};
+
+fs.writeFileSync(distPath, JSON.stringify(cleanPkg, null, 2));
+console.log("✅ Clean package.json written to dist/");
