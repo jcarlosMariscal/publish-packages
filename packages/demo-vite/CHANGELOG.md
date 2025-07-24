@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.6](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.5...v0.2.6) (2025-07-24)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: ultima config ([ae47269](https://github.com/jcarlosMariscal/publish-packages/commit/ae47269e248095cd500d9373de28c282fab2bd02))
+
 ## [0.2.5](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.4...v0.2.5) (2025-07-24)
 
 ### Bug Fixes
