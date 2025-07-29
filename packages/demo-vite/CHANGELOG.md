@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0](https://github.com/jcarlosMariscal/publish-packages/compare/v0.3.0...v0.4.0) (2025-07-29)
+
+### Features
+
+* **@jcmariscal/demo-vite:** :sparkles: añadir contenido ([a215b6a](https://github.com/jcarlosMariscal/publish-packages/commit/a215b6a606566890cf80259c664e6d6a35a46eac))
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: ajustar lógica de transformación en la configuración del changelog ([d6f1d1a](https://github.com/jcarlosMariscal/publish-packages/commit/d6f1d1a04895f1325c59ce59c48d950a863024b4))
+* **@jcmariscal/demo-vite:** :bug: ajuste completo ([4047d4d](https://github.com/jcarlosMariscal/publish-packages/commit/4047d4dea0dc369320ed9ed6abb15f4a39580439))
+* **@jcmariscal/demo-vite:** :bug: cambio title ([4c7ec19](https://github.com/jcarlosMariscal/publish-packages/commit/4c7ec19f30ac2d10ef34371fda66815c594f7dd6))
+* **@jcmariscal/demo-vite:** :bug: improve commit transformation logic in changelog config ([94158f0](https://github.com/jcarlosMariscal/publish-packages/commit/94158f007df8bd1c8187f96bd24273fdaf435c9c))
+* **@jcmariscal/demo-vite:** :bug: otro ajuste ([9bb7418](https://github.com/jcarlosMariscal/publish-packages/commit/9bb741871f5d7da0595133d99fe3321e9a8b2f8c))
+* **@jcmariscal/demo-vite:** :bug: update changelog configuration to use conventional commits preset ([248ca81](https://github.com/jcarlosMariscal/publish-packages/commit/248ca81eb87f8ddb5e4ee57c8a9992032eae5fbe))
+
 ## [0.3.0](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.11...v0.3.0) (2025-07-29)
 
 ### Features
