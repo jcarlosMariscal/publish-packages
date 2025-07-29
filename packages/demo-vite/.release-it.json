@@ -19,7 +19,7 @@
       "infile": "CHANGELOG.md",
       "write": true,
       "changelogOpts": {
-        "config": "./changelog.ts"
+        "config": "./changelog.js"
       }
     }
   }
