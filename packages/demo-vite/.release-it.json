@@ -27,7 +27,7 @@
         "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
       },
       "commitFilters": {
-        "scope": ["@jcmariscal/demo-vite", null]
+        "scope": "@jcmariscal/demo-vite"
       },
       "path": "./packages/demo-vite"
     }
