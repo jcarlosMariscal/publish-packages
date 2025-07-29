@@ -2,7 +2,8 @@ const conventionalCommits = require("conventional-changelog-conventionalcommits"
 
 module.exports = async (...args) => {
   const preset = await conventionalCommits(...args);
-  const targetScope = process.env.CHANGELOG_SCOPE;
+  //   const targetScope = process.env.CHANGELOG_SCOPE;
+  const targetScope = "@jcmariscal/demo-vite";
 
   const originalTransform = preset.writerOpts.transform;
 
