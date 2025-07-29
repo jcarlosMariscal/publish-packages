@@ -1,34 +1,29 @@
-const conventionalChangelogConventionalCommits = require("conventional-changelog-conventionalcommits");
+const getConventionalChangelogPreset = require("conventional-changelog-conventionalcommits");
 
-const allowedScopes = ["@jcmariscal/demo-vite"]; // Ajusta el scope aquí
+const allowedScopes = ["@jcmariscal/demo-vite"]; // ✅ Cambia aquí el scope del paquete actual
 
-module.exports = {
-  // ✅ Necesario para el análisis de commits y decidir el bump
-  parserOpts: conventionalChangelogConventionalCommits.parserOpts,
-  whatBump: conventionalChangelogConventionalCommits.whatBump,
+module.exports = async () => {
+  const base = await getConventionalChangelogPreset();
 
-  // ✅ Esta parte es para el changelog visual
-  writerOpts: {
-    ...conventionalChangelogConventionalCommits.writerOpts,
-    transform: (commit, context) => {
-      const scope = commit.scope?.trim();
+  return {
+    ...base,
+    writerOpts: {
+      ...base.writerOpts,
+      transform: (commit, context) => {
+        const scope = commit.scope?.trim();
 
-      if (!scope || !allowedScopes.includes(scope)) {
-        return null; // Excluye del changelog
-      }
+        // ⛔️ Excluimos los commits fuera del scope deseado del changelog
+        if (!scope || !allowedScopes.includes(scope)) {
+          return null;
+        }
 
-      // 🔄 Procesa el commit con la lógica del preset
-      if (
-        typeof conventionalChangelogConventionalCommits.writerOpts.transform ===
-        "function"
-      ) {
-        return conventionalChangelogConventionalCommits.writerOpts.transform(
-          commit,
-          context
-        );
-      }
+        // ✅ Si el preset original tiene transform, usamos su salida
+        if (typeof base.writerOpts.transform === "function") {
+          return base.writerOpts.transform(commit, context);
+        }
 
-      return commit;
+        return commit;
+      },
     },
-  },
+  };
 };
