@@ -1,20 +1,23 @@
 const conventionalChangelogConventionalCommits = require("conventional-changelog-conventionalcommits");
 
-const allowedScopes = ["@jcmariscal/demo-vite"]; // Cambia esto según el scope de tu paquete
+const allowedScopes = ["@jcmariscal/demo-vite"]; // Ajusta el scope aquí
 
 module.exports = {
-  ...conventionalChangelogConventionalCommits,
+  // ✅ Necesario para el análisis de commits y decidir el bump
+  parserOpts: conventionalChangelogConventionalCommits.parserOpts,
+  whatBump: conventionalChangelogConventionalCommits.whatBump,
+
+  // ✅ Esta parte es para el changelog visual
   writerOpts: {
     ...conventionalChangelogConventionalCommits.writerOpts,
     transform: (commit, context) => {
       const scope = commit.scope?.trim();
 
-      // Si el scope no es permitido, no se incluye en el changelog
       if (!scope || !allowedScopes.includes(scope)) {
-        return null;
+        return null; // Excluye del changelog
       }
 
-      // Si el preset original tiene su propia transform, la usamos
+      // 🔄 Procesa el commit con la lógica del preset
       if (
         typeof conventionalChangelogConventionalCommits.writerOpts.transform ===
         "function"
@@ -25,7 +28,6 @@ module.exports = {
         );
       }
 
-      // Si no tiene, devolvemos el commit como está
       return commit;
     },
   },
