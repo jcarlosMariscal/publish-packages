@@ -17,18 +17,13 @@
     "@release-it/conventional-changelog": {
       "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
-      "writerOpts": {
-        "commitsSort": ["scope", "subject"],
-        "groupBy": "scope"
-      },
       "parserOpts": {
-        "headerPattern": "^([^:]+)(?:\\((@jcmariscal\\/[\\w-]+)\\))?: (.+)$",
-        "breakingHeaderPattern": "^([^:]+)(?:\\((@jcmariscal\\/[\\w-]+)\\))?!: (.+)$"
+        "headerPattern": "^([^:]+)\\((@jcmariscal\\/demo-vite)\\): (.+)$",
+        "breakingHeaderPattern": "^([^:]+)\\((@jcmariscal\\/demo-vite)\\)!: (.+)$"
       },
       "commitFilters": {
-        "scope": ["@jcmariscal/demo-vite", null]
-      },
-      "path": "./packages/demo-vite"
+        "scope": "@jcmariscal/demo-vite"
+      }
     }
   }
 }
