@@ -11,6 +11,9 @@ importers:
       '@release-it/conventional-changelog':
         specifier: ^10.0.1
         version: 10.0.1(release-it@19.0.4)
+      conventional-changelog-writer:
+        specifier: ^8.2.0
+        version: 8.2.0
       prettier:
         specifier: ^3.6.0
         version: 3.6.0
