@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "release": "release-it",
+    "prepare:package": "node ../../scripts/generate-package.mjs",
+    "copy:assets": "npm run prepare:package && cp CHANGELOG.md dist/ && cp README.md dist/",
+    "prepare:publish": "npm run build && npm run release && npm run copy:assets",
+    "publish:dist": "cd dist && npm publish"
   },
   "dependencies": {
     "react": "^19.1.0",
