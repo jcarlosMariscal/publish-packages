@@ -1,7 +1,7 @@
 {
   "git": {
     "commitMessage": "chore(release): v${version}",
-    "tagName": "@vite-demo v${version}",
+    "tagName": "@vite-demo-v${version}",
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
     "requireBranch": "main",
