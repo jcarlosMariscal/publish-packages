@@ -1,27 +1,32 @@
 const conventionalChangelogConventionalCommits = require("conventional-changelog-conventionalcommits");
 
+const allowedScopes = ["@jcmariscal/demo-vite"]; // Cambia esto según el scope de tu paquete
+
 module.exports = {
   ...conventionalChangelogConventionalCommits,
-  parserOpts: {
-    ...conventionalChangelogConventionalCommits.parserOpts,
-    headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
-    headerCorrespondence: ["type", "scope", "subject"],
-  },
   writerOpts: {
     ...conventionalChangelogConventionalCommits.writerOpts,
     transform: (commit, context) => {
-      const allowedScopes = ["@jcmariscal/demo-vite"];
       const scope = commit.scope?.trim();
-      console.log("This is commit: ", commit);
 
+      // Si el scope no es permitido, no se incluye en el changelog
       if (!scope || !allowedScopes.includes(scope)) {
-        // No excluir para release-it, solo marcar para ocultar en changelog
-        commit.skip = true;
+        return null;
       }
 
+      // Si el preset original tiene su propia transform, la usamos
+      if (
+        typeof conventionalChangelogConventionalCommits.writerOpts.transform ===
+        "function"
+      ) {
+        return conventionalChangelogConventionalCommits.writerOpts.transform(
+          commit,
+          context
+        );
+      }
+
+      // Si no tiene, devolvemos el commit como está
       return commit;
     },
-    // Opcional: excluir visualmente commits con skip en el changelog
-    finalizeContext: (context) => context,
   },
 };
