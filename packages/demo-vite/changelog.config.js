@@ -10,10 +10,14 @@ module.exports = {
   writerOpts: {
     ...conventionalChangelogConventionalCommits.writerOpts,
     transform: (commit, context) => {
-      const allowedScopes = ["demo-vite"]; // 👈 cambia este scope por el de tu paquete actual
+      const allowedScopes = ["@jcmariscal/demo-vite"];
+      console.log(commit);
 
-      if (!commit.scope || !allowedScopes.includes(commit.scope)) {
-        return;
+      // 🧽 Asegúrate de limpiar espacios y comparar bien
+      const scope = commit.scope?.trim();
+
+      if (!scope || !allowedScopes.includes(scope)) {
+        return; // Ignora commits sin scope o con otro scope
       }
 
       return commit;
