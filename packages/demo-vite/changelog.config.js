@@ -1,31 +1,20 @@
-const getConventionalChangelogPreset = require("conventional-changelog-conventionalcommits");
+const conventionalCommits = require("conventional-changelog-conventionalcommits");
 
-const allowedScopes = ["@jcmariscal/demo-vite"]; // ✅ Cambia aquí el scope del paquete actual
+module.exports = async (...args) => {
+  const preset = await conventionalCommits(...args);
+  const targetScope = process.env.CHANGELOG_SCOPE;
 
-module.exports = async () => {
-  const base = await getConventionalChangelogPreset();
+  const originalTransform = preset.writerOpts.transform;
 
-  return {
-    ...base,
-    writerOpts: {
-      ...base.writerOpts,
-      transform: (commit, context) => {
-        console.log(commit);
+  preset.writerOpts.transform = (commit, context) => {
+    // Filtro por scope
+    if (targetScope && commit.scope !== targetScope) {
+      return;
+    }
 
-        const scope = commit.scope?.trim();
-
-        // ⛔️ Excluimos los commits fuera del scope deseado del changelog
-        if (!scope || !allowedScopes.includes(scope)) {
-          return null;
-        }
-
-        // ✅ Si el preset original tiene transform, usamos su salida
-        if (typeof base.writerOpts.transform === "function") {
-          return base.writerOpts.transform(commit, context);
-        }
-
-        return commit;
-      },
-    },
+    // Asegúrate de aplicar también la transformación original
+    return originalTransform ? originalTransform(commit, context) : commit;
   };
+
+  return preset;
 };
