@@ -15,12 +15,9 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
       "write": true,
-      "changelogOpts": {
-        "config": "./changelog.js"
-      }
+      "preset": "./changelog.config.js"
     }
   }
 }
