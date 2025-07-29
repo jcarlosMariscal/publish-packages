@@ -18,15 +18,10 @@
       "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
       "write": true,
-      "writerOpts": {
-        "commitsSort": ["scope", "subject"],
-        "groupBy": "scope"
+      "commitFilters": {
+        "scope": "@jcmariscal/${packageName}"
       },
-      "parserOpts": {
-        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
-      },
-      "commitPath": "./packages/demo-vite",
-      "lernaPackage": "@jcmariscal/demo-vite"
+      "path": "./packages/${packageName}"
     }
   }
 }
