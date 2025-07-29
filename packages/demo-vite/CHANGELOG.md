@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.3.0](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.11...v0.3.0) (2025-07-29)
+
+### Features
+
+* :sparkles: config vs code ([6cb0918](https://github.com/jcarlosMariscal/publish-packages/commit/6cb09183e856ee1001baea5b0552bdc0550501d8))
+* :sparkles: instalación de dependencia ([764bbaa](https://github.com/jcarlosMariscal/publish-packages/commit/764bbaa816c7cfd651d6a243fefc809cc3667df9))
+* **@jcmariscal/demo-vite:** :sparkles: cambios impprtatntes ([0e2a859](https://github.com/jcarlosMariscal/publish-packages/commit/0e2a859563b7065affb0b1e1a78979bd78c07b54))
+* **@jcmariscal/demo-vite:** :sparkles: config extra ([8aba1e1](https://github.com/jcarlosMariscal/publish-packages/commit/8aba1e1d95a921f33d9649faae0cf86e429e0ff0))
+* **@jcmariscal/demo-vite:** :sparkles: mejora en config ([04d9f86](https://github.com/jcarlosMariscal/publish-packages/commit/04d9f86a54e139ac5520c25031dbf06f97fd1a8a))
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** :bug: ajustes ([4809262](https://github.com/jcarlosMariscal/publish-packages/commit/4809262572721abb5bb9bd809d6a1e7c08a822e6))
+* **@jcmariscal/demo-vite:** :bug: ajustes config ([d909a8f](https://github.com/jcarlosMariscal/publish-packages/commit/d909a8fa37efffc56a54189903079704238f3009))
+* **@jcmariscal/demo-vite:** :bug: cambios importantes en configuración ([1dd5186](https://github.com/jcarlosMariscal/publish-packages/commit/1dd5186b3568fa468162de41d92d5f1d58063c7e))
+* **@jcmariscal/demo-vite:** :bug: mejoras ([b77a8c6](https://github.com/jcarlosMariscal/publish-packages/commit/b77a8c62aae7b9afabb5edde192c0c4a1eaf8c46))
+* **@jcmariscal/vite-demo:** :bug: cambio config ([5a54523](https://github.com/jcarlosMariscal/publish-packages/commit/5a545239a2b26bb0a8e4140e8362777412639946))
+* **@jcmariscal/vite-demo:** :bug: changes tag ([ae79bdb](https://github.com/jcarlosMariscal/publish-packages/commit/ae79bdbd75fc32ae9f6f45886b04269e4f10068c))
+* **@jcmariscal/vite-demo:** :sparkles: release vite demo ([a961e1e](https://github.com/jcarlosMariscal/publish-packages/commit/a961e1ea948437ac970671516f2cdcb962dbc26a))
+
 ## [0.2.11](https://github.com/jcarlosMariscal/publish-packages/compare/v0.2.10...v0.2.11) (2025-07-24)
 
 ### Bug Fixes
