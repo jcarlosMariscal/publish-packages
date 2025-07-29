@@ -10,6 +10,7 @@ const scope = pkg.name.replace(/^@/, ""); // Ej: "jcmariscal/demo-vite"
 export default {
   transform(commit) {
     const scopeRegex = new RegExp(`^${scope}$`);
+    console.log("Evaluating commit scope:", commit.scope);
 
     const commitScope = commit.scope || "";
     if (!scopeRegex.test(commitScope)) {
