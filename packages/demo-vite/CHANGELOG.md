@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.1](https://github.com/jcarlosMariscal/publish-packages/compare/v0.4.0...v0.4.1) (2025-07-29)
+
+### Bug Fixes
+
+* **@jcmariscal/demo-vite:** add console log for commit transformation debugging ([4e50547](https://github.com/jcarlosMariscal/publish-packages/commit/4e50547b66a29ff5332d72c7debc968458fc9507))
+* **@jcmariscal/demo-vite:** refine conventional changelog configuration by simplifying commit filters and updating header patterns ([a1f4611](https://github.com/jcarlosMariscal/publish-packages/commit/a1f461127ef8a6df99b47037340c23992e6de11a))
+* **@jcmariscal/demo-vite:** set target scope to '@jcmariscal/demo-vite' ([083b6c3](https://github.com/jcarlosMariscal/publish-packages/commit/083b6c3ecaf1b8979f3554fe8dabf239651403bd))
+* **@jcmariscal/demo-vite:** simplify conventional changelog configuration by removing unused options ([80fef7f](https://github.com/jcarlosMariscal/publish-packages/commit/80fef7f1564ad5201b685b23d4e2aeffe06459dc))
+* **@jcmariscal/demo-vite:** update changelog preset to 'atom' ([ff837c9](https://github.com/jcarlosMariscal/publish-packages/commit/ff837c99e716cc5fa891c9e8badf3beb65e79018))
+* **@jcmariscal/demo-vite:** update changelog preset to use custom configuration ([bddea7b](https://github.com/jcarlosMariscal/publish-packages/commit/bddea7bc214ee0b48f40d40a6f506cae0600ff1e))
+* **@jcmariscal/demo-vite:** update commitFilters scope to a single value for consistency ([5dd9d09](https://github.com/jcarlosMariscal/publish-packages/commit/5dd9d099bea39e441f75b24dfbda3d4091c88383))
+* **@jcmariscal/demo-vite:** update conventional changelog configuration to allow multiple commit scopes ([693fbcf](https://github.com/jcarlosMariscal/publish-packages/commit/693fbcfc6a159d414808e693363ba200c816a2e9))
+* **@jcmariscal/demo-vite:** update release-it configuration for conventional changelog ([16252ba](https://github.com/jcarlosMariscal/publish-packages/commit/16252baba41df677079de1e92edca17915ea8034))
+* **@jcmariscal/demo-vite:** update release-it configuration for conventional changelog to improve commit filtering and path settings ([93671b7](https://github.com/jcarlosMariscal/publish-packages/commit/93671b7fc780b4b0b9503081b4bd6a0881d1560c))
+
 ## [0.4.0](https://github.com/jcarlosMariscal/publish-packages/compare/v0.3.0...v0.4.0) (2025-07-29)
 
 ### Features
