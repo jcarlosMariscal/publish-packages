@@ -17,7 +17,7 @@
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
       "write": true,
-      "preset": "./changelog.config.js"
+      "changelogPreset": "./changelog.config.js"
     }
   }
 }

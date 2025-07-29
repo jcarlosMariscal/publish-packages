@@ -4,17 +4,16 @@ module.exports = {
   ...conventionalChangelogConventionalCommits,
   parserOpts: {
     ...conventionalChangelogConventionalCommits.parserOpts,
-    // Filtramos los commits por scope del paquete
-    // Cambia "ebook-icons-native" por el scope deseado
     headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
     headerCorrespondence: ["type", "scope", "subject"],
   },
   writerOpts: {
+    ...conventionalChangelogConventionalCommits.writerOpts,
     transform: (commit, context) => {
-      const allowedScopes = ["demo-vite"]; // 👈 cámbialo por el scope del paquete actual
+      const allowedScopes = ["demo-vite"]; // 👈 cambia este scope por el de tu paquete actual
 
       if (!commit.scope || !allowedScopes.includes(commit.scope)) {
-        return; // 👈 ignorar el commit
+        return;
       }
 
       return commit;
