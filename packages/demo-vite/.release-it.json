@@ -15,9 +15,18 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
+      "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
       "write": true,
-      "preset": "./changelog.config.js"
+      "writerOpts": {
+        "commitsSort": ["scope", "subject"],
+        "groupBy": "scope"
+      },
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+      },
+      "commitPath": "./packages/demo-vite",
+      "lernaPackage": "@jcmariscal/demo-vite"
     }
   }
 }
