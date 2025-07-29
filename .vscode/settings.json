@@ -4,5 +4,8 @@
       "mode": "auto"
     }
   ],
-  "conventionalCommits.scopes": ["@jcmariscal/demo-vite"]
+  "conventionalCommits.scopes": [
+    "@jcmariscal/demo-vite",
+    "@jcmariscal/vite-demo"
+  ]
 }
