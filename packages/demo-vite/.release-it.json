@@ -18,10 +18,18 @@
       "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
       "write": true,
-      "commitFilters": {
-        "scope": "@jcmariscal/${packageName}"
+      "writerOpts": {
+        "commitsSort": ["scope", "subject"],
+        "groupBy": "scope"
       },
-      "path": "./packages/${packageName}"
+      "parserOpts": {
+        "headerPattern": "^([^:]+)(?:\\((@jcmariscal/demo-vite)\\))?: (.+)$",
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+      },
+      "commitFilters": {
+        "scope": ["@jcmariscal/demo-vite", null]
+      },
+      "path": "./packages/demo-vite"
     }
   }
 }
