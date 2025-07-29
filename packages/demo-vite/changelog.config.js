@@ -11,16 +11,17 @@ module.exports = {
     ...conventionalChangelogConventionalCommits.writerOpts,
     transform: (commit, context) => {
       const allowedScopes = ["@jcmariscal/demo-vite"];
-      console.log(commit);
-
-      // 🧽 Asegúrate de limpiar espacios y comparar bien
       const scope = commit.scope?.trim();
+      console.log("This is commit: ", commit);
 
       if (!scope || !allowedScopes.includes(scope)) {
-        return; // Ignora commits sin scope o con otro scope
+        // No excluir para release-it, solo marcar para ocultar en changelog
+        commit.skip = true;
       }
 
       return commit;
     },
+    // Opcional: excluir visualmente commits con skip en el changelog
+    finalizeContext: (context) => context,
   },
 };
