@@ -10,6 +10,8 @@ module.exports = async () => {
     writerOpts: {
       ...base.writerOpts,
       transform: (commit, context) => {
+        console.log(commit);
+
         const scope = commit.scope?.trim();
 
         // ⛔️ Excluimos los commits fuera del scope deseado del changelog
